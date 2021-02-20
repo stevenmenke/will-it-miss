@@ -4,13 +4,15 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "parcel build src/index.html --experimental-scope-hoisting"
+    "test": "node tests/*.js",
+    "build": "npm run test && parcel build src/index.html --experimental-scope-hoisting",
+    "push": "git push -u origin main"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "axios": "^0.21.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.20.0",
     "eslint-plugin-react": "^7.22.0",
